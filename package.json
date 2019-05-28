@@ -1,27 +1,27 @@
 {
-  "name": "padasalai",
-  "version": "1.0.0",
-  "description": "padasalai is a school management software is a tool that is specifically designed to streamline the paperless administration of schools and educational institutions. It consists of various modules that greatly help the teachers and staff in maintaining student records, academic history, and other essential student information.",
-  "main": "index.js",
-  "scripts": {
-    "start": "webpack-dev-server --config ./webpack.config.js --mode development",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@babel/core": "^7.4.5",
-    "@babel/preset-env": "^7.4.5",
-    "@babel/preset-react": "^7.0.0",
-    "babel-loader": "^8.0.6",
-    "react-hot-loader": "^4.8.8",
-    "webpack": "^4.32.2",
-    "webpack-cli": "^3.3.2",
-    "webpack-dev-server": "^3.4.1"
-  },
-  "dependencies": {
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
-  }
+    "name": "padasalai",
+    "version": "1.0.0",
+    "description": "padasalai is a school management software is a tool that is specifically designed to streamline the paperless administration of schools and educational institutions.",
+    "main": "index.js",
+    "scripts": {
+        "start": "webpack-dev-server --config ./webpack.config.js --mode development",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/core": "^7.4.5",
+        "@babel/preset-env": "^7.4.5",
+        "@babel/preset-react": "^7.0.0",
+        "babel-loader": "^8.0.6",
+        "react-hot-loader": "^4.8.8",
+        "webpack": "^4.32.2",
+        "webpack-cli": "^3.3.2",
+        "webpack-dev-server": "^3.4.1"
+    },
+    "dependencies": {
+        "react": "^16.8.6",
+        "react-dom": "^16.8.6"
+    }
 }
