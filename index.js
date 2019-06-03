@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import Login from "./src/login/login";
+import Login from "./src/gateway/login";
 
 ReactDOM.render(<Login />, document.getElementById("app"));
 

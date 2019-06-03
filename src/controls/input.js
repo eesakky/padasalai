@@ -1,14 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-class TextInput extends React.Component {
+import "./input.scss";
+
+class Input extends React.Component {
     render() {
-        return (
-            <div>
-                <input type='text' />
-            </div>
-        );
+        return <input type={this.props.type} className='inputStyle' />;
     }
 }
 
-export default TextInput;
+export default Input;
