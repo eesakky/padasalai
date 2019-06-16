@@ -4,38 +4,32 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
     entry: "./index.js",
-    plugins: [
-        new webpack.HotModuleReplacementPlugin(),
-        new MiniCssExtractPlugin({
-            filename: "[name].css",
-            chunkFilename: "[id].css"
-        })
-    ],
     module: {
         rules: [
             {
                 test: /\.(js|jsx)$/,
-                exclude: /node_modules/main.css
-                use: ["babel-loader"]
+                exclude: "/node_modules/",
+                loader: "babel-loader"
             },
             {
-                test: /\.(sa|sc|c)ss$/,
-                use: [
-                    {
-                        loader: MiniCssExtractPlugin.loader,
-                        options: {
-                            hmr: process.env.NODE_ENV === "development"
-                        }
-                    },
-                    "css-loader",
-                    "sass-loader"
-                ]
+                test: /\.s?css$/,
+                exclude: "/node_modules/",
+
+                loader:
+                    "style-loader!css-loader?modules=true&localIdentName=[name]__[local]___[hash:base64:5]"
             }
         ]
     },
     resolve: {
         extensions: ["*", ".js", ".jsx"]
     },
+    plugins: [
+        new webpack.HotModuleReplacementPlugin(),
+        new MiniCssExtractPlugin({
+            filename: "[name].css"
+            //​​chunkFilename: "chunk-[id].css"
+        })
+    ],
     output: {
         path: __dirname + "/dist",
         publicPath: "/",
