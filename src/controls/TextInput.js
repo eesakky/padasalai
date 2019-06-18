@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import Style from "./input.scss";
+import Style from "./TextInput.scss";
 
-class Input extends React.Component {
+class TextInput extends React.Component {
     render() {
         return (
             <input
@@ -15,4 +15,4 @@ class Input extends React.Component {
     }
 }
 
-export default Input;
+export default TextInput;

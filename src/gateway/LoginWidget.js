@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 
-import Input from "../controls/input";
-import Styles from "./gateway.scss";
+import TextInput from "../controls/TextInput";
+import Styles from "./Gateway.scss";
 
 class Login extends React.Component {
     constructor(props) {
@@ -11,39 +11,42 @@ class Login extends React.Component {
             email: "",
             password: ""
         };
-        this.handleSubmit = this.handleSubmit.bind(this);
     }
+
+    handleSubmit() {
+        console.warn(this.state.email);
+    }
+
+    handleChange = e => {
+        const name = e.target.name;
+        const value = e.target.value;
+        this.setState({ [name]: value });
+    };
 
     render() {
         return (
             <div className={Styles.gateway}>
                 <div className={Styles.loginForm}>
-                    <Input
+                    <TextInput
                         name='email'
                         type='text'
                         placeholder='Enter your email'
-                        onChange={event =>
-                            this.setState({ email: event.target.value })
-                        }
+                        onChange={this.handleChange}
                     />
-                    <Input
+                    <TextInput
                         name='password'
                         type='password'
                         placeholder='Enter your password'
-                        onChange={event =>
-                            this.setState({ password: event.target.value })
-                        }
+                        onChange={this.handleChange}
                     />
-                    <button type='submit' onClick={this.handleSubmit}>
+                    <button
+                        type='submit'
+                        onClick={this.handleSubmit.bind(this)}>
                         login
                     </button>
                 </div>
             </div>
         );
-    }
-
-    handleSubmit() {
-        console.warn(this.state.email);
     }
 }
 
