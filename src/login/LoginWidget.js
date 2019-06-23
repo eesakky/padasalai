@@ -2,9 +2,10 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 
 import TextInput from "../controls/TextInput";
-import Styles from "./Gateway.scss";
+import Styles from "./LoginWidget.scss";
+import Email from "../base/Email";
 
-class Login extends React.Component {
+class LoginWidget extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -27,12 +28,7 @@ class Login extends React.Component {
         return (
             <div className={Styles.gateway}>
                 <div className={Styles.loginForm}>
-                    <TextInput
-                        name='email'
-                        type='text'
-                        placeholder='Enter your email'
-                        onChange={this.handleChange}
-                    />
+                    <Email onChange={this.handleChange} />
                     <TextInput
                         name='password'
                         type='password'
@@ -50,4 +46,4 @@ class Login extends React.Component {
     }
 }
 
-export default Login;
+export default LoginWidget;

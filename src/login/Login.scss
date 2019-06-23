@@ -1,0 +1,23 @@
+.loginContainerFluid {
+    width: 100%;
+    display: table;
+    height: 100vh;
+}
+
+.loginImage,
+.loginContainer {
+    height: 100%;
+    display: table-cell;
+}
+
+.loginImage {
+    background-color: #f2ecec;
+    background-repeat: no-repeat;
+    width: 30%;
+}
+.loginContainer {
+    background-color: #b8aff0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

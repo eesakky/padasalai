@@ -10,6 +10,8 @@ class TextInput extends React.Component {
                 type={this.props.type}
                 className={Style.inputStyle}
                 placeholder={this.props.placeholder}
+                onChange={this.props.onChange}
+                name={this.props.name}
             />
         );
     }
