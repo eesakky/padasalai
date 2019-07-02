@@ -1,13 +1,17 @@
 import React, { Component } from "react";
 
+import headerStyles from "./Header.scss";
+
 class Header extends React.Component {
     render() {
-        <div className='nav-bar-header-one'>
-            <a className='header-logo' href=''>
-                <img />
-            </a>
-            <span className='hamburgerIcon' />
-        </div>;
+        return (
+            <header className={headerStyles.navBar}>
+                <a className={headerStyles.headerLogo} href=''>
+                    <img />
+                </a>
+                <span className={headerStyles.hamburgerIcon} />
+            </header>
+        );
     }
 }
 

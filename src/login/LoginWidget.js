@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
+import { Route, Link, BrowserRouter as Router } from "react-router-dom";
 
 import TextInput from "../controls/TextInput";
 import Styles from "./LoginWidget.scss";
@@ -22,6 +23,7 @@ class LoginWidget extends React.Component {
         const name = e.target.name;
         const value = e.target.value;
         this.setState({ [name]: value });
+        this.props.history.push("/header");
     };
 
     render() {
@@ -40,6 +42,7 @@ class LoginWidget extends React.Component {
                         onClick={this.handleSubmit.bind(this)}>
                         login
                     </button>
+                    <Link to='/header'> Login</Link>
                 </div>
             </div>
         );

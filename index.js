@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import Login from "./src/login/Login.js";
+import FlowManager from "./src/FlowManager.js";
 
-ReactDOM.render(<Login />, document.getElementById("app"));
+ReactDOM.render(<FlowManager />, document.getElementById("app"));
 
 module.hot.accept();
