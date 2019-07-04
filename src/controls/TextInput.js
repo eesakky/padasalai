@@ -8,7 +8,7 @@ class TextInput extends React.Component {
         return (
             <input
                 type={this.props.type}
-                className={Style.inputStyle}
+                className='inputStyle'
                 placeholder={this.props.placeholder}
                 onChange={this.props.onChange}
                 name={this.props.name}
