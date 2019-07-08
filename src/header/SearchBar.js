@@ -5,12 +5,14 @@ import TextInput from "../controls/TextInput";
 class Searchbar extends React.Component {
     render() {
         return (
-            <ul className={Styles.navBar}>
-                <li>
-                    <span className={Styles.iconSearch} />
-                    <TextInput type='text' />
-                </li>
-            </ul>
+            <div className={Styles.navBar}>
+                <span className={Styles.iconSearch} />
+                <TextInput
+                    type='text'
+                    className={Styles.inputSearch}
+                    placeholder='Find Something...'
+                />
+            </div>
         );
     }
 }

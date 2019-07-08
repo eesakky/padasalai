@@ -28,23 +28,78 @@ class LoginWidget extends React.Component {
 
     render() {
         return (
-            <div className={Styles.gateway}>
-                <div className={Styles.loginForm}>
-                    <Email onChange={this.handleChange} />
+            <div className={Styles.loginForm}>
+                <h4>Sign In</h4>
+                {this.renderEmail()}
+                {this.renderPassword()}
+                {this.renderForgotPassword()}
+                {this.renderButton()}
+                <Link to='/header'> Login</Link>
+            </div>
+        );
+    }
+
+    renderEmail() {
+        return (
+            <div className={Styles.fieldGroup}>
+                <label className={Styles.label}>
+                    Your Email<span className='jss323'>&thinsp;*</span>
+                </label>
+                <div className={Styles.inputControl}>
+                    <Email
+                        onChange={this.handleChange}
+                        className={Styles.inputField}
+                    />
+                </div>
+            </div>
+        );
+    }
+
+    renderPassword() {
+        return (
+            <div className={Styles.fieldGroup}>
+                <label className={Styles.label}>
+                    Your Email<span className='jss323'>&thinsp;*</span>
+                </label>
+                <div className={Styles.inputControl}>
                     <TextInput
                         name='password'
                         type='password'
-                        placeholder='Enter your password'
                         onChange={this.handleChange}
+                        className={Styles.inputField}
                     />
-                    <button
-                        type='submit'
-                        onClick={this.handleSubmit.bind(this)}>
-                        login
-                    </button>
-                    <Link to='/header'> Login</Link>
                 </div>
             </div>
+        );
+    }
+
+    renderForgotPassword() {
+        return (
+            <div className={Styles.troubleInLogin}>
+                <label className={Styles.remember}>
+                    <TextInput
+                        className='jss380'
+                        name='checkbox'
+                        type='checkbox'
+                    />
+                    <span className='jss234'>Remember</span>
+                </label>
+                <a className={Styles.forgotPassword} tabindex='0' role='button'>
+                    <span className='jss271'>Forgot Password</span>
+                    <span className='jss98' />
+                </a>
+            </div>
+        );
+    }
+
+    renderButton() {
+        return (
+            <button
+                type='submit'
+                className={Styles.loginButton}
+                onClick={this.handleSubmit.bind(this)}>
+                Login
+            </button>
         );
     }
 }

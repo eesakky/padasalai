@@ -1,8 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { BrowserRouter } from "react-router-dom";
 
-import FlowManager from "./src/FlowManager.js";
+import SiteManager from "./src/SiteManager.js";
 
-ReactDOM.render(<FlowManager />, document.getElementById("app"));
+ReactDOM.render(
+    <BrowserRouter>
+        <SiteManager />
+    </BrowserRouter>,
+    document.getElementById("app")
+);
 
 module.hot.accept();

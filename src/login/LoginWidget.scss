@@ -2,3 +2,50 @@
     width: 360px;
     margin: 0 auto;
 }
+
+.label {
+    top: 12px;
+    left: 10px;
+    position: absolute;
+}
+
+.inputControl {
+    position: relative;
+    transition: border 0.3s ease;
+    align-items: center;
+}
+.inputField {
+    width: 100%;
+    height: 40px;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.32);
+}
+.fieldGroup {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.troubleInLogin {
+    display: table;
+    width: 100%;
+}
+
+.remember,
+.forgotPassword {
+    display: table-cell;
+}
+.remember {
+    text-align: left;
+}
+.forgotPassword {
+    text-align: right;
+}
+
+.loginButton {
+    background-color: #1565c0;
+    border: none;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 20px 0;
+}

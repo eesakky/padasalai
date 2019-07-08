@@ -1,10 +1,19 @@
 .navBar {
     width: 400px;
+    display: table;
 }
 .iconSearch {
-    background-image: url("../assets/loginImage.png");
-    width: 16px;
-    height: 16px;
-    display: inline-block;
+    background-image: url("../assets/iconSearch.png");
+    width: 30px;
+    height: 30px;
+    display: table-cell;
     background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+}
+
+.inputSearch {
+    border: none;
+    display: table-cell;
+    outline: none;
 }

@@ -6,8 +6,9 @@ class Email extends React.Component {
             <input
                 type='email'
                 name='email'
-                placeholder='Enter Your Email'
+                placeholder={this.props.placeHolder}
                 onChange={this.props.onChange}
+                className={this.props.className}
             />
         );
     }
