@@ -8,9 +8,7 @@ class Header extends React.Component {
         return (
             <header className={headerStyles.navBar}>
                 <div className={headerStyles.logoContainer}>
-                    <a className={headerStyles.headerLogo} href=''>
-                        <img src='../assets/logo.png' />
-                    </a>
+                    <span className={headerStyles.headerLogo} />
                     <span className={headerStyles.hamburgerIcon} />
                 </div>
                 <SearchBar />
