@@ -18,14 +18,17 @@ module.exports = {
                 loader: "babel-loader"
             },
             {
-                test: /\.s?css$/,
+                test: /\.(sa|sc|c)ss$/,
                 exclude: "/node_modules/",
                 use: [
-                    MiniCssExtractPlugin.loader,
-                    // "style-loader!css-loader?modules=true&localIdentName=[name]__[local]___[hash:base64:5]"
-                    "style-loader", // Injects style into DOM
-                    "css-loader", // Turns CSS into JS
-                    "sass-loader" // Turns SCSS into CSS
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            hmr: process.env.NODE_ENV === "development"
+                        }
+                    },
+                    "css-loader",
+                    "sass-loader"
                 ]
             },
             {
